@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Ceylony Digital - Our story, mission, vision, and the passionate team behind our innovative software development solutions.">
+    <meta name="keywords" content="about ceylony digital, our team, company story, mission, vision, software development team Sri Lanka">
+    <meta name="author" content="Ceylony Digital">
+    
+    <title>About Us - Ceylony Digital | Our Story & Team</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230052FF'/><text x='50' y='55' text-anchor='middle' fill='white' font-size='30' font-weight='bold'>C</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0052FF;
+            --secondary-blue: #1E40AF;
+            --accent-cyan: #00D9FF;
+            --accent-purple: #8B5CF6;
+            --accent-pink: #EC4899;
+            --accent-green: #10B981;
+            --accent-orange: #F59E0B;
+            --dark-bg: #0A0B14;
+            --darker-bg: #060710;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            
+            /* Enhanced Gradients */
+            --gradient-primary: linear-gradient(135deg, #0052FF 0%, #00D9FF 50%, #8B5CF6 100%);
+            --gradient-secondary: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #0052FF 100%);
+            --gradient-hero: linear-gradient(135deg, #0052FF 0%, #00D9FF 30%, #8B5CF6 70%, #EC4899 100%);
+            --gradient-card: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+            
+            /* Enhanced Glow Effects */
+            --glow-blue: 0 0 40px rgba(0, 82, 255, 0.4);
+            --glow-cyan: 0 0 30px rgba(0, 217, 255, 0.5);
+            --glow-purple: 0 0 35px rgba(139, 92, 246, 0.4);
+            --glow-pink: 0 0 25px rgba(236, 72, 153, 0.4);
+            --glow-green: 0 0 30px rgba(16, 185, 129, 0.4);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: 
+                radial-gradient(ellipse at top left, var(--dark-bg) 0%, var(--darker-bg) 50%),
+                radial-gradient(ellipse at bottom right, rgba(0, 82, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at center, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced Navigation */
+        #navbar {
+            backdrop-filter: blur(25px);
+            background: rgba(6, 7, 16, 0.9);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-weight: 500;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .nav-link:hover::before {
+            left: 0;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-cyan) !important;
+            transform: translateY(-2px);
+            box-shadow: var(--glow-cyan);
+        }
+
+        /* Enhanced Cards */
+        .premium-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: var(--glow-blue);
+            border-color: var(--accent-cyan);
+        }
+
+        .premium-card:hover::before {
+            left: 100%;
+        }
+
+        /* Enhanced Team Cards */
+        .team-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0.05;
+            transition: left 0.8s ease;
+        }
+
+        .team-card:hover::before {
+            left: 100%;
+        }
+
+        .team-card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: var(--glow-purple);
+            border-color: var(--accent-purple);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card:hover .team-avatar {
+            transform: scale(1.1);
+            box-shadow: var(--glow-cyan);
+        }
+
+        /* Enhanced Process Steps */
+        .process-step {
+            background: var(--gradient-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-secondary);
+            opacity: 0.05;
+            transition: left 0.6s ease;
+        }
+
+        .process-step:hover::before {
+            left: 100%;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--glow-pink);
+            border-color: var(--accent-pink);
+        }
+
+        .process-number {
+            background: var(--gradient-primary);
+            box-shadow: var(--glow-blue);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover .process-number {
+            transform: scale(1.1);
+            box-shadow: var(--glow-cyan);
+        }
+
+        /* Enhanced Advantage Cards */
+        .advantage-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-hero);
+            opacity: 0.05;
+            transition: left 0.6s ease;
+        }
+
+        .advantage-card:hover::before {
+            left: 100%;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-15px) rotateY(3deg);
+            box-shadow: var(--glow-green);
+            border-color: var(--accent-green);
+        }
+
+        /* Enhanced Counter animations */
+        .counter {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            filter: drop-shadow(0 0 10px rgba(0, 82, 255, 0.5));
+        }
+
+        /* Enhanced Buttons */
+        .btn-primary {
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 16px;
+            padding: 16px 32px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: var(--glow-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-secondary);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--glow-cyan);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid;
+            border-image: var(--gradient-primary) 1;
+            border-radius: 16px;
+            padding: 14px 30px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn-secondary:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--glow-purple);
+        }
+
+        /* Mobile Responsive Enhancements */
+        @media (max-width: 768px) {
+            .premium-card,
+            .team-card,
+            .process-step,
+            .advantage-card {
+                border-radius: 20px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .premium-card:hover,
+            .team-card:hover,
+            .process-step:hover,
+            .advantage-card:hover {
+                transform: translateY(-8px) scale(1.01);
+            }
+            
+            .team-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 1rem;
+                padding: 18px 32px;
+                font-size: 1.1rem;
+            }
+            
+            .nav-link {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+            
+            #navbar {
+                backdrop-filter: blur(15px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .premium-card,
+            .team-card,
+            .process-step,
+            .advantage-card {
+                padding: 1.5rem !important;
+                border-radius: 16px;
+            }
+            
+            .team-avatar {
+                width: 80px;
+                height: 80px;
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Enhanced animations for mobile */
+        @keyframes mobileSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes mobileSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile-specific animations */
+        @media (max-width: 768px) {
+            [data-aos="fade-up"] {
+                animation: mobileSlideUp 0.6s ease-out;
+            }
+            
+            [data-aos="fade-right"] {
+                animation: mobileSlideIn 0.6s ease-out;
+            }
+            
+            [data-aos="fade-left"] {
+                animation: mobileSlideIn 0.6s ease-out reverse;
+            }
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+
+    <!-- Enhanced Navigation -->
+    <nav class="fixed top-0 w-full z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                        <span class="text-xl font-bold text-white">C</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-2">
+                    <a href="index.html" class="nav-link text-white">Home</a>
+                    <a href="about.html" class="nav-link text-cyan-400">About</a>
+                    <a href="services.html" class="nav-link text-white">Services</a>
+                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
+                    <a href="contact.html" class="nav-link text-white">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-xl" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Enhanced Mobile Menu -->
+        <div class="md:hidden bg-gray-900/95 backdrop-blur-lg hidden border-t border-cyan-500/20" id="mobile-menu">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-all nav-link">
+                    <i class="fas fa-home mr-3"></i>Home
+                </a>
+                <a href="about.html" class="block px-4 py-3 text-cyan-400 bg-cyan-500/10 rounded-lg nav-link">
+                    <i class="fas fa-user-friends mr-3"></i>About
+                </a>
+                <a href="services.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-all nav-link">
+                    <i class="fas fa-cogs mr-3"></i>Services
+                </a>
+                <a href="portfolio.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-all nav-link">
+                    <i class="fas fa-folder mr-3"></i>Portfolio
+                </a>
+                <a href="contact.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-all nav-link">
+                    <i class="fas fa-envelope mr-3"></i>Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section class="relative pt-24 pb-20 min-h-screen flex items-center">
+        <!-- Enhanced Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-48 md:w-64 h-48 md:h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+            <div class="absolute top-1/2 left-1/2 w-32 md:w-48 h-32 md:h-48 bg-pink-500/10 rounded-full blur-2xl animate-bounce"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 text-sm font-medium text-green-300 mb-8">
+                    🌟 Get to Know Us Better
+                </span>
+                
+                <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-8">
+                    About <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-12 font-light px-4">
+                    We are passionate innovators transforming businesses through 
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">cutting-edge technology</span> 
+                    and creative solutions.
+                </p>
+                
+                <!-- Enhanced Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-12 px-4">
+                    <div data-aos="fade-up" data-aos-delay="100" class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold counter mb-2" data-target="50">0</div>
+                        <div class="text-gray-400 text-sm md:text-base">Projects Completed</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold counter mb-2" data-target="30">0</div>
+                        <div class="text-gray-400 text-sm md:text-base">Happy Clients</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold counter mb-2" data-target="5">0</div>
+                        <div class="text-gray-400 text-sm md:text-base">Years Experience</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400" class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold text-green-400">24/7</div>
+                        <div class="text-gray-400 text-sm md:text-base">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Company Story Section -->
+    <section class="py-16 md:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div data-aos="fade-right" class="order-2 lg:order-1">
+                    <span class="inline-block bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-green-300 mb-6">
+                        Our Journey
+                    </span>
+                    
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8">
+                        Our <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Story</span>
+                    </h2>
+                    
+                    <div class="space-y-6 text-base md:text-lg text-gray-300 leading-relaxed">
+                        <p>
+                            Founded in <span class="text-blue-400 font-semibold">2020</span>, Ceylony Digital began as a small team of passionate developers with a big vision: to help businesses thrive in the digital age. What started as a simple web development service has evolved into a comprehensive digital solutions provider.
+                        </p>
+                        <p>
+                            Our journey has been marked by continuous learning, innovation, and an unwavering commitment to excellence. We've had the privilege of working with diverse clients, from startup entrepreneurs to established enterprises, each bringing unique challenges that have shaped our expertise.
+                        </p>
+                        <p>
+                            Today, we stand as a trusted partner for businesses seeking to establish a strong digital presence. Our success is measured not just by the projects we complete, but by the <span class="text-purple-400 font-semibold">lasting relationships</span> we build and the impact we create for our clients.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-6 premium-card">
+                            <div class="text-3xl text-blue-400 mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Innovation</h4>
+                            <p class="text-sm text-gray-400">Cutting-edge solutions for modern challenges</p>
+                        </div>
+                        <div class="text-center p-6 premium-card">
+                            <div class="text-3xl text-purple-400 mb-3">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Collaboration</h4>
+                            <p class="text-sm text-gray-400">Teamwork & strategic partnerships</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative order-1 lg:order-2" data-aos="fade-left">
+                    <div class="premium-card p-6 md:p-8 text-center">
+                        <div class="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-6 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10">
+                                <i class="fas fa-building text-4xl md:text-6xl text-white/90 mb-4"></i>
+                                <p class="text-white font-semibold text-sm md:text-base">Our Office Environment</p>
+                            </div>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Modern Workspace</h3>
+                        <p class="text-gray-400 text-sm md:text-base">Where creativity meets technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Mission, Vision & Values Section -->
+    <section class="py-16 md:py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-purple-300 mb-6">
+                    Our Foundation
+                </span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Mission, Vision & <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Values</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                    Our core principles guide everything we do and shape the way we serve our clients and community.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Mission -->
+                <div class="premium-card p-8 md:p-10 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-2xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-6">Our Mission</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        To empower businesses with innovative digital solutions that drive growth, enhance efficiency, and create meaningful connections with their audiences through cutting-edge technology.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="premium-card p-8 md:p-10 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-2xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-6">Our Vision</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        To be the leading digital transformation partner in Sri Lanka, recognized globally for our innovation, quality, and unwavering commitment to client success and technological excellence.
+                    </p>
+                </div>
+                
+                <!-- Values -->
+                <div class="premium-card p-8 md:p-10 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-2xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-6">Our Values</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Excellence, integrity, innovation, and collaboration form the foundation of our work culture and client relationships, driving us to deliver exceptional results consistently.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Team Section -->
+    <section class="py-16 md:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-green-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-6">
+                    Our People
+                </span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Meet Our <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Team</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                    Our diverse team of experts brings together creativity, technical expertise, and passion for innovation to deliver exceptional results.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar bg-gradient-to-br from-blue-500 to-blue-700">
+                        KP
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Kasun Perera</h3>
+                    <p class="text-blue-400 mb-4 font-semibold text-sm md:text-base">Lead Developer</p>
+                    <p class="text-gray-400 text-xs md:text-sm mb-6 leading-relaxed">
+                        Full-stack developer with 8+ years of experience in web and mobile development. Specialist in React, Node.js, and cloud technologies.
+                    </p>
+                    <div class="flex justify-center space-x-3 md:space-x-4">
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-blue-500/20 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-blue-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-gray-500/20 hover:bg-gray-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-github text-gray-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-blue-400/20 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-twitter text-blue-300 hover:text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar bg-gradient-to-br from-pink-500 to-pink-700">
+                        SF
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Sanduni Fernando</h3>
+                    <p class="text-pink-400 mb-4 font-semibold text-sm md:text-base">UI/UX Designer</p>
+                    <p class="text-gray-400 text-xs md:text-sm mb-6 leading-relaxed">
+                        Creative designer with expertise in user experience design and modern UI trends. Passionate about creating intuitive and beautiful interfaces.
+                    </p>
+                    <div class="flex justify-center space-x-3 md:space-x-4">
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-pink-500/20 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-pink-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-purple-500/20 hover:bg-purple-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-dribbble text-purple-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-blue-500/20 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-behance text-blue-400 hover:text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-avatar bg-gradient-to-br from-green-500 to-green-700">
+                        CS
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Chaminda Silva</h3>
+                    <p class="text-green-400 mb-4 font-semibold text-sm md:text-base">Digital Marketing Specialist</p>
+                    <p class="text-gray-400 text-xs md:text-sm mb-6 leading-relaxed">
+                        Digital marketing expert with proven track record in SEO, social media marketing, and paid advertising campaigns that deliver results.
+                    </p>
+                    <div class="flex justify-center space-x-3 md:space-x-4">
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-green-500/20 hover:bg-green-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-green-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-blue-600/20 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-facebook text-blue-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-pink-500/20 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-instagram text-pink-400 hover:text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-avatar bg-gradient-to-br from-purple-500 to-purple-700">
+                        TR
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Tharushi Rajapaksa</h3>
+                    <p class="text-purple-400 mb-4 font-semibold text-sm md:text-base">Video Producer</p>
+                    <p class="text-gray-400 text-xs md:text-sm mb-6 leading-relaxed">
+                        Creative video producer and editor with experience in corporate videos, animations, and engaging social media content creation.
+                    </p>
+                    <div class="flex justify-center space-x-3 md:space-x-4">
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-purple-500/20 hover:bg-purple-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-purple-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-red-500/20 hover:bg-red-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-youtube text-red-400 hover:text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-blue-500/20 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-vimeo text-blue-400 hover:text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Enhanced AOS initialization
+        AOS.init({
+            duration: 800,
+            once: false,
+            offset: 50,
+            easing: 'ease-out-cubic',
+            delay: 50
+        });
+        
+        // Enhanced mobile initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavigation();
+            initializeMobileMenu();
+            initializeCounterAnimations();
+            optimizeForMobile();
+        });
+        
+        // Enhanced navigation with mobile optimizations
+        function initializeNavigation() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(6, 7, 16, 0.95)';
+                    navbar.style.borderBottom = '1px solid rgba(0, 217, 255, 0.3)';
+                    navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.6)';
+                } else {
+                    navbar.style.background = 'rgba(6, 7, 16, 0.9)';
+                    navbar.style.borderBottom = '1px solid rgba(0, 217, 255, 0.2)';
+                    navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
+                }
+            });
+        }
+        
+        // Enhanced mobile menu with smooth animations
+        function initializeMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const icon = mobileMenuBtn.querySelector('i');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.style.animation = 'slideDown 0.3s ease-out';
+                icon.className = 'fas fa-times text-xl';
+                
+                // Add backdrop blur effect
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.style.animation = 'slideUp 0.3s ease-out';
+                icon.className = 'fas fa-bars text-xl';
+                document.body.style.overflow = 'auto';
+                
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+        }
+        
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const icon = mobileMenuBtn.querySelector('i');
+            
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.style.animation = 'slideUp 0.3s ease-out';
+                icon.className = 'fas fa-bars text-xl';
+                document.body.style.overflow = 'auto';
+                
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+        }
+        
+        // Enhanced counter animations with mobile optimization
+        function initializeCounterAnimations() {
+            const counters = document.querySelectorAll('.counter');
+            const observerOptions = { 
+                threshold: window.innerWidth < 768 ? 0.3 : 0.5, 
+                rootMargin: '0px 0px -50px 0px' 
+            };
+            
+            const counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            counters.forEach(counter => counterObserver.observe(counter));
+        }
+        
+        function animateCounter(counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = window.innerWidth < 768 ? 1500 : 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                    counter.style.animation = 'bounce 0.5s ease-out';
+                }
+            };
+            
+            updateCounter();
+        }
+        
+        // Mobile optimization function
+        function optimizeForMobile() {
+            if (window.innerWidth < 768) {
+                // Reduce animation duration for mobile
+                const style = document.createElement('style');
+                style.textContent = `
+                    .premium-card,
+                    .team-card,
+                    .process-step,
+                    .advantage-card {
+                        transition-duration: 0.3s !important;
+                    }
+                    
+                    @keyframes slideDown {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-20px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    
+                    @keyframes slideUp {
+                        from {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                        to {
+                            opacity: 0;
+                            transform: translateY(-20px);
+                        }
+                    }
+                    
+                    @keyframes bounce {
+                        0%, 20%, 50%, 80%, 100% {
+                            transform: translateY(0);
+                        }
+                        40% {
+                            transform: translateY(-8px);
+                        }
+                        60% {
+                            transform: translateY(-4px);
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        // Enhanced resize handler
+        window.addEventListener('resize', function() {
+            optimizeForMobile();
+            
+            // Re-initialize AOS for mobile
+            if (window.innerWidth < 768) {
+                AOS.init({
+                    duration: 600,
+                    once: false,
+                    offset: 30,
+                    easing: 'ease-out-cubic'
+                });
+            }
+        });
+        
+        // Touch event optimizations for mobile
+        if ('ontouchstart' in window) {
+            const cards = document.querySelectorAll('.premium-card, .team-card, .process-step, .advantage-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.01)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 100);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
