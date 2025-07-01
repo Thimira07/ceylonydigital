@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Ceylony Digital - Our story, mission, vision, and the passionate team behind our innovative software development solutions.">
+    <meta name="keywords" content="about ceylony digital, our team, company story, mission, vision, software development team Sri Lanka">
+    <meta name="author" content="Ceylony Digital">
+    
+    <title>About Us - Ceylony Digital | Our Story & Team</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%232563eb'/><text x='50' y='55' text-anchor='middle' fill='white' font-size='30' font-weight='bold'>C</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1e40af;
+            --light-blue: #60a5fa;
+            --accent-blue: #3b82f6;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-blue: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-purple: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --gradient-sunset: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            --gradient-ocean: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Navigation */
+        #navbar {
+            backdrop-filter: blur(20px);
+            background: rgba(15, 15, 35, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--light-blue) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Cards */
+        .premium-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 30px 60px rgba(37, 99, 235, 0.4);
+        }
+
+        .premium-card:hover::before {
+            left: 100%;
+        }
+
+        /* Team Cards */
+        .team-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(37, 99, 235, 0.4);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .team-card:hover .team-avatar {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+        }
+
+        /* Process Steps */
+        .process-step {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+        }
+
+        .process-number {
+            background: var(--gradient-blue);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover .process-number {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
+        }
+
+        /* Timeline */
+        .timeline-node {
+            background: var(--gradient-blue);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-node:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
+        }
+
+        /* Advantage Cards */
+        .advantage-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-15px) rotateY(5deg);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.4);
+        }
+
+        .advantage-card:hover::before {
+            left: 100%;
+        }
+
+        /* Counter animations */
+        .counter {
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        /* Enhanced buttons */
+        .btn-primary {
+            background: var(--gradient-blue);
+            border: none;
+            border-radius: 16px;
+            padding: 16px 32px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 14px 30px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .premium-card:hover,
+            .team-card:hover,
+            .advantage-card:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                        <span class="text-xl font-bold text-white">C</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-2">
+                    <a href="index.html" class="nav-link text-white">Home</a>
+                    <a href="about.html" class="nav-link text-blue-400">About</a>
+                    <a href="services.html" class="nav-link text-white">Services</a>
+                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
+                    <a href="contact.html" class="nav-link text-white">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-gray-900/95 backdrop-blur-lg hidden" id="mobile-menu">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Home</a>
+                <a href="about.html" class="block px-4 py-3 text-blue-400">About</a>
+                <a href="services.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Services</a>
+                <a href="portfolio.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Portfolio</a>
+                <a href="contact.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-20 min-h-screen flex items-center">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+            <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-pink-500/10 rounded-full blur-2xl animate-bounce"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-8">
+                    🌟 Get to Know Us Better
+                </span>
+                
+                <h1 class="text-6xl md:text-8xl font-black mb-8">
+                    About <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                </h1>
+                
+                <p class="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-12 font-light">
+                    We are passionate innovators transforming businesses through 
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">cutting-edge technology</span> 
+                    and creative solutions.
+                </p>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl md:text-5xl font-bold counter mb-2" data-target="50">0</div>
+                        <div class="text-gray-400">Projects Completed</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl md:text-5xl font-bold counter mb-2" data-target="30">0</div>
+                        <div class="text-gray-400">Happy Clients</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl md:text-5xl font-bold counter mb-2" data-target="5">0</div>
+                        <div class="text-gray-400">Years Experience</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-4xl md:text-5xl font-bold text-green-400">24/7</div>
+                        <div class="text-gray-400">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <span class="inline-block bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-green-300 mb-6">
+                        Our Journey
+                    </span>
+                    
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                        Our <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Story</span>
+                    </h2>
+                    
+                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+                        <p>
+                            Founded in <span class="text-blue-400 font-semibold">2020</span>, Ceylony Digital began as a small team of passionate developers with a big vision: to help businesses thrive in the digital age. What started as a simple web development service has evolved into a comprehensive digital solutions provider.
+                        </p>
+                        <p>
+                            Our journey has been marked by continuous learning, innovation, and an unwavering commitment to excellence. We've had the privilege of working with diverse clients, from startup entrepreneurs to established enterprises, each bringing unique challenges that have shaped our expertise.
+                        </p>
+                        <p>
+                            Today, we stand as a trusted partner for businesses seeking to establish a strong digital presence. Our success is measured not just by the projects we complete, but by the <span class="text-purple-400 font-semibold">lasting relationships</span> we build and the impact we create for our clients.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-6 premium-card">
+                            <div class="text-3xl text-blue-400 mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Innovation</h4>
+                            <p class="text-sm text-gray-400">Cutting-edge solutions for modern challenges</p>
+                        </div>
+                        <div class="text-center p-6 premium-card">
+                            <div class="text-3xl text-purple-400 mb-3">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Collaboration</h4>
+                            <p class="text-sm text-gray-400">Teamwork & strategic partnerships</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="premium-card p-8 text-center">
+                        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-6 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10">
+                                <i class="fas fa-building text-6xl text-white/90 mb-4"></i>
+                                <p class="text-white font-semibold">Our Office Environment</p>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Modern Workspace</h3>
+                        <p class="text-gray-400">Where creativity meets technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision & Values Section -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-purple-300 mb-6">
+                    Our Foundation
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    Mission, Vision & <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Values</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Our core principles guide everything we do and shape the way we serve our clients and community.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="premium-card p-10 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Our Mission</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To empower businesses with innovative digital solutions that drive growth, enhance efficiency, and create meaningful connections with their audiences through cutting-edge technology.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="premium-card p-10 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Our Vision</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To be the leading digital transformation partner in Sri Lanka, recognized globally for our innovation, quality, and unwavering commitment to client success and technological excellence.
+                    </p>
+                </div>
+                
+                <!-- Values -->
+                <div class="premium-card p-10 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Our Values</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Excellence, integrity, innovation, and collaboration form the foundation of our work culture and client relationships, driving us to deliver exceptional results consistently.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-green-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-6">
+                    Our People
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    Meet Our <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Team</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Our diverse team of experts brings together creativity, technical expertise, and passion for innovation to deliver exceptional results.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar bg-gradient-to-br from-blue-500 to-blue-700">
+                        KP
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Kasun Perera</h3>
+                    <p class="text-blue-400 mb-4 font-semibold">Lead Developer</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Full-stack developer with 8+ years of experience in web and mobile development. Specialist in React, Node.js, and cloud technologies.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-500/20 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-blue-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-500/20 hover:bg-gray-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-github text-gray-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400/20 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-twitter text-blue-300 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar bg-gradient-to-br from-pink-500 to-pink-700">
+                        SF
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Sanduni Fernando</h3>
+                    <p class="text-pink-400 mb-4 font-semibold">UI/UX Designer</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Creative designer with expertise in user experience design and modern UI trends. Passionate about creating intuitive and beautiful interfaces.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 bg-pink-500/20 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-pink-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-purple-500/20 hover:bg-purple-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-dribbble text-purple-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-500/20 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-behance text-blue-400 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-avatar bg-gradient-to-br from-green-500 to-green-700">
+                        CS
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Chaminda Silva</h3>
+                    <p class="text-green-400 mb-4 font-semibold">Digital Marketing Specialist</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Digital marketing expert with proven track record in SEO, social media marketing, and paid advertising campaigns that deliver results.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-500/20 hover:bg-green-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-green-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600/20 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-facebook text-blue-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-500/20 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-instagram text-pink-400 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-avatar bg-gradient-to-br from-purple-500 to-purple-700">
+                        TR
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Tharushi Rajapaksa</h3>
+                    <p class="text-purple-400 mb-4 font-semibold">Video Producer</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Creative video producer and editor with experience in corporate videos, animations, and engaging social media content creation.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 bg-purple-500/20 hover:bg-purple-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin text-purple-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-500/20 hover:bg-red-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-youtube text-red-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-500/20 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all">
+                            <i class="fab fa-vimeo text-blue-400 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-6">
+                    How We Work
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    Our Development <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Process</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We follow a proven methodology that ensures quality deliverables and client satisfaction at every step of the journey.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="process-step p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-number w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Discovery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We start by understanding your business goals, target audience, and project requirements through detailed consultation and research.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Planning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We create detailed project plans, wireframes, and technical specifications to ensure clear roadmap and realistic expectations.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-number w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Our skilled developers bring your vision to life using cutting-edge technologies and industry best practices for optimal results.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-number w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Launch</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We thoroughly test, deploy, and provide ongoing support to ensure your project's success and optimal performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-green-300 mb-6">
+                    Why Choose Us
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    What Makes Us <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Different</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Here's what sets us apart from other digital agencies and makes us the right choice for your business transformation.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Advantage 1 -->
+                <div class="advantage-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-trophy text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Proven Expertise</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        5+ years of experience with 50+ successful projects across various industries and cutting-edge technologies.
+                    </p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="advantage-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Timely Delivery</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We respect deadlines and deliver projects on time without compromising on quality or functionality standards.
+                    </p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="advantage-card p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">24/7 Support</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Comprehensive support and maintenance services to keep your digital assets running smoothly around the clock.
+                    </p>
+                </div>
+                
+                <!-- Advantage 4 -->
+                <div class="advantage-card p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-dollar-sign text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Competitive Pricing</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        High-quality solutions at competitive rates with transparent pricing and absolutely no hidden costs or surprises.
+                    </p>
+                </div>
+                
+                <!-- Advantage 5 -->
+                <div class="advantage-card p-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Latest Technology</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We stay updated with the latest technologies and trends to provide cutting-edge solutions that future-proof your business.
+                    </p>
+                </div>
+                
+                <!-- Advantage 6 -->
+                <div class="advantage-card p-8" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Long-term Partnership</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We build lasting relationships with our clients, becoming their trusted technology partner for continued growth and success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <div data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-pink-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-6">
+                    Ready to Start?
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-8">
+                    Ready to Start Your <span class="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">Digital Journey?</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+                    Let's discuss your project and explore how we can help you achieve your digital goals. Our team is ready to bring your vision to life with cutting-edge technology.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-envelope"></i>
+                        Start a Project
+                    </a>
+                    <a href="portfolio.html" class="btn-secondary text-lg px-8 py-4">
+                        <i class="fas fa-folder"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                            <span class="text-xl font-bold text-white">C</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+                        Professional software development company specializing in creating stunning digital experiences that drive business growth and success.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center hover:from-blue-600 hover:to-blue-700 transition-all">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg flex items-center justify-center hover:from-blue-500 hover:to-blue-600 transition-all">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-blue-700 to-blue-800 rounded-lg flex items-center justify-center hover:from-blue-800 hover:to-blue-900 transition-all">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg flex items-center justify-center hover:from-pink-600 hover:to-pink-700 transition-all">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-blue-400 transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Stay Updated</h3>
+                    <p class="text-gray-300 mb-4 text-sm">Subscribe for latest updates and exclusive offers.</p>
+                    <form id="newsletter-form" class="space-y-3">
+                        <input type="email" id="newsletter-email" placeholder="Your email address" 
+                               class="w-full px-4 py-3 bg-white/10 backdrop-blur-lg text-white rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400">
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Ceylony Digital. All rights reserved. | Crafted with ❤️ and cutting-edge technology
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full shadow-xl transition-all duration-300 transform scale-0 z-30">
+        <i class="fas fa-arrow-up text-xl text-white"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Initialize components
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavigation();
+            initializeMobileMenu();
+            initializeCounterAnimations();
+            initializeNewsletterForm();
+        });
+        
+        // Navigation functionality
+        function initializeNavigation() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(15, 15, 35, 0.95)';
+                } else {
+                    navbar.style.background = 'rgba(15, 15, 35, 0.9)';
+                }
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.style.transform = 'scale(1)';
+                } else {
+                    backToTopBtn.style.transform = 'scale(0)';
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Mobile menu functionality
+        function initializeMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Counter animations
+        function initializeCounterAnimations() {
+            const counters = document.querySelectorAll('.counter');
+            const observerOptions = { threshold: 0.5, rootMargin: '0px 0px -100px 0px' };
+            
+            const counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            counters.forEach(counter => counterObserver.observe(counter));
+        }
+        
+        function animateCounter(counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        }
+        
+        // Newsletter form
+        function initializeNewsletterForm() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletter-email').value;
+                    
+                    if (!email || !email.includes('@')) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    showNotification('Thank you for subscribing!', 'success');
+                    this.reset();
+                });
+            }
+        }
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm transition-all duration-300 transform translate-x-full`;
+            
+            switch (type) {
+                case 'success':
+                    notification.classList.add('bg-green-600', 'text-white');
+                    notification.innerHTML = `<i class="fas fa-check-circle mr-2"></i>${message}`;
+                    break;
+                case 'error':
+                    notification.classList.add('bg-red-600', 'text-white');
+                    notification.innerHTML = `<i class="fas fa-exclamation-circle mr-2"></i>${message}`;
+                    break;
+                default:
+                    notification.classList.add('bg-blue-600', 'text-white');
+                    notification.innerHTML = `<i class="fas fa-info-circle mr-2"></i>${message}`;
+            }
+            
+            document.body.appendChild(notification);
+            setTimeout(() => notification.classList.remove('translate-x-full'), 100);
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

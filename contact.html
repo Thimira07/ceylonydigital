@@ -1,0 +1,698 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Ceylony Digital for your web development, mobile app, digital marketing, and video production needs. Get a free quote today!">
+    <meta name="keywords" content="contact ceylony digital, web development contact, mobile app development contact, digital marketing services Sri Lanka">
+    <meta name="author" content="Ceylony Digital">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - Ceylony Digital">
+    <meta property="og:description" content="Get in touch with Ceylony Digital for professional web development, mobile apps, and digital marketing services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceylonydigital.com/contact">
+    
+    <title>Contact Us - Ceylony Digital | Get a Free Quote Today</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Ceylony Digital" class="h-10 w-10 mr-3">
+                    <span class="text-2xl font-bold text-blue-400">Ceylony Digital</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-blue-400 transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-blue-400 transition-colors">About</a>
+                    <a href="services.html" class="nav-link text-white hover:text-blue-400 transition-colors">Services</a>
+                    <a href="portfolio.html" class="nav-link text-white hover:text-blue-400 transition-colors">Portfolio</a>
+                    <a href="contact.html" class="nav-link text-blue-400 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-gray-800 hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-white hover:text-blue-400">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:text-blue-400">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:text-blue-400">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-white hover:text-blue-400">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-20 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    Contact <span class="text-blue-400">Us</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Ready to transform your digital presence? Let's discuss your project and create something amazing together.
+                </p>
+                
+                <!-- Quick Contact Info -->
+                <div class="flex flex-col sm:flex-row justify-center gap-8 mt-12">
+                    <div class="contact-quick-info" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl text-blue-400 mb-2">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="text-white font-semibold">Call Us</div>
+                        <div class="text-gray-400">+94 77 123 4567</div>
+                    </div>
+                    <div class="contact-quick-info" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl text-green-400 mb-2">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="text-white font-semibold">Email Us</div>
+                        <div class="text-gray-400">info@ceylonydigital.com</div>
+                    </div>
+                    <div class="contact-quick-info" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl text-purple-400 mb-2">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="text-white font-semibold">Response Time</div>
+                        <div class="text-gray-400">Within 24 hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                    <p class="text-gray-400 mb-8">
+                        Fill out the form below and we'll get back to you as soon as possible. All fields marked with * are required.
+                    </p>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+                                Full Name *
+                            </label>
+                            <input type="text" id="name" name="name" required
+                                   class="form-input w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                                   placeholder="Enter your full name">
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                                Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                   class="form-input w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                                   placeholder="Enter your email address">
+                        </div>
+                        
+                        <!-- Phone Field -->
+                        <div class="form-group">
+                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
+                                Phone Number
+                            </label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="form-input w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                                   placeholder="Enter your phone number">
+                        </div>
+                        
+                        <!-- Service Selection -->
+                        <div class="form-group">
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">
+                                Service Interested In
+                            </label>
+                            <select id="service" name="service"
+                                    class="form-input w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="mobile-development">Mobile App Development</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="seo-services">SEO Services</option>
+                                <option value="video-production">Video Production</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Budget Range -->
+                        <div class="form-group">
+                            <label for="budget" class="block text-sm font-medium text-gray-300 mb-2">
+                                Project Budget Range
+                            </label>
+                            <select id="budget" name="budget"
+                                    class="form-input w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
+                                <option value="">Select budget range</option>
+                                <option value="under-1000">Under $1,000</option>
+                                <option value="1000-5000">$1,000 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000-25000">$10,000 - $25,000</option>
+                                <option value="25000-plus">$25,000+</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Subject Field -->
+                        <div class="form-group">
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">
+                                Subject *
+                            </label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="form-input w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                                   placeholder="Brief subject of your inquiry">
+                        </div>
+                        
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
+                                Project Details *
+                            </label>
+                            <textarea id="message" name="message" rows="6" required
+                                      class="form-textarea w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent resize-vertical"
+                                      placeholder="Tell us about your project, goals, timeline, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <!-- Terms Checkbox -->
+                        <div class="form-group">
+                            <label class="flex items-start">
+                                <input type="checkbox" id="terms" name="terms" required
+                                       class="mt-1 mr-3 h-4 w-4 text-blue-600 bg-gray-900 border-gray-700 rounded focus:ring-blue-400">
+                                <span class="text-sm text-gray-400">
+                                    I agree to the <a href="#" class="text-blue-400 hover:text-blue-300">Terms of Service</a> 
+                                    and <a href="#" class="text-blue-400 hover:text-blue-300">Privacy Policy</a> *
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-btn"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                        
+                        <!-- Form Status -->
+                        <div id="form-status" class="hidden p-4 rounded-lg text-center font-semibold"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+                    <p class="text-gray-400 mb-8">
+                        We're here to help bring your digital vision to life. Choose the best way to reach us.
+                    </p>
+                    
+                    <!-- Contact Methods -->
+                    <div class="space-y-8 mb-12">
+                        <!-- Phone -->
+                        <div class="contact-method flex items-start">
+                            <div class="contact-icon w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Phone</h3>
+                                <p class="text-gray-400 mb-2">Call us for immediate assistance</p>
+                                <a href="tel:+94771234567" class="text-blue-400 hover:text-blue-300 font-semibold">
+                                    +94 77 123 4567
+                                </a>
+                                <p class="text-sm text-gray-500 mt-1">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-method flex items-start">
+                            <div class="contact-icon w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
+                                <p class="text-gray-400 mb-2">Send us an email anytime</p>
+                                <a href="mailto:info@ceylonydigital.com" class="text-green-400 hover:text-green-300 font-semibold">
+                                    info@ceylonydigital.com
+                                </a>
+                                <p class="text-sm text-gray-500 mt-1">Response within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <!-- WhatsApp -->
+                        <div class="contact-method flex items-start">
+                            <div class="contact-icon w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">WhatsApp</h3>
+                                <p class="text-gray-400 mb-2">Chat with us instantly</p>
+                                <a href="https://wa.me/94771234567" target="_blank" rel="noopener" class="text-green-500 hover:text-green-400 font-semibold">
+                                    +94 77 123 4567
+                                </a>
+                                <p class="text-sm text-gray-500 mt-1">Quick responses during business hours</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Office Location -->
+                        <div class="contact-method flex items-start">
+                            <div class="contact-icon w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Office</h3>
+                                <p class="text-gray-400 mb-2">Visit us at our office</p>
+                                <address class="text-purple-400 not-italic">
+                                    123 Business Street<br>
+                                    Colombo 03, Western Province<br>
+                                    Sri Lanka
+                                </address>
+                                <p class="text-sm text-gray-500 mt-1">By appointment only</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-media">
+                        <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-link w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </a>
+                            <a href="#" class="social-link w-10 h-10 bg-blue-400 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter text-white"></i>
+                            </a>
+                            <a href="#" class="social-link w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-linkedin-in text-white"></i>
+                            </a>
+                            <a href="#" class="social-link w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                            <a href="#" class="social-link w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-youtube text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-4">Find Us</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Located in the heart of Colombo, we're easily accessible and ready to meet with you to discuss your project in person.
+                </p>
+            </div>
+            
+            <!-- Interactive Map Placeholder -->
+            <div class="map-container bg-gray-800 rounded-xl overflow-hidden" data-aos="fade-up">
+                <div class="aspect-w-16 aspect-h-9 h-96 bg-gray-700 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-6xl text-blue-400 mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Interactive Map</h3>
+                        <p class="text-gray-400">Click to view our location on Google Maps</p>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" 
+                           class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Quick answers to common questions about our services, process, and pricing.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-gray-900 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">How quickly can you start my project?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-gray-400">
+                                We can typically start new projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited timelines. The exact start date depends on our current workload and project complexity.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-gray-900 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">Do you offer free consultations?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-gray-400">
+                                Yes! We offer free initial consultations to understand your needs and provide project recommendations. This includes a 30-60 minute discussion about your goals, timeline, and budget.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-gray-900 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">What information should I include in my project inquiry?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-gray-400">
+                                Please include: project type, business goals, target audience, preferred timeline, budget range, specific features needed, and any design preferences. The more details you provide, the better we can understand and quote your project.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-gray-900 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">Do you work with international clients?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-gray-400">
+                                Absolutely! We work with clients worldwide. We're experienced in remote collaboration and use modern tools to ensure smooth communication across different time zones and cultures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+                    Subscribe to our newsletter for the latest web development tips, digital marketing insights, and special offers.
+                </p>
+                
+                <form id="footer-newsletter-form" class="max-w-md mx-auto flex gap-4">
+                    <input type="email" id="footer-newsletter-email" placeholder="Enter your email address" 
+                           class="flex-1 px-4 py-3 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+                           required>
+                    <button type="submit" class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+                
+                <p class="text-sm text-blue-200 mt-4">
+                    No spam, unsubscribe anytime. Read our <a href="#" class="underline">Privacy Policy</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="images/logo.png" alt="Ceylony Digital" class="h-10 w-10 mr-3">
+                        <span class="text-2xl font-bold text-blue-400">Ceylony Digital</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Professional software development company specializing in web development, mobile applications, digital marketing, and creative solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-blue-400 transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">+94 77 123 4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">info@ceylonydigital.com</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Business Street<br>Colombo 03, Sri Lanka</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Ceylony Digital. All rights reserved. | Designed & Developed with ❤️ by Ceylony Digital
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 z-30">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Contact Form Handler
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const formStatus = document.getElementById('form-status');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                // Send form data to PHP handler
+                const response = await fetch('php/contact-form.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Success
+                    formStatus.className = 'block p-4 rounded-lg text-center font-semibold bg-green-600 text-white';
+                    formStatus.textContent = result.message;
+                    this.reset(); // Clear form
+                } else {
+                    // Error
+                    formStatus.className = 'block p-4 rounded-lg text-center font-semibold bg-red-600 text-white';
+                    formStatus.textContent = result.message || 'Something went wrong. Please try again.';
+                }
+                
+                formStatus.classList.remove('hidden');
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                formStatus.className = 'block p-4 rounded-lg text-center font-semibold bg-red-600 text-white';
+                formStatus.textContent = 'Network error. Please check your connection and try again.';
+                formStatus.classList.remove('hidden');
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                
+                // Hide status after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            }
+        });
+        
+        // Footer Newsletter Form
+        document.getElementById('footer-newsletter-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('footer-newsletter-email').value;
+            
+            try {
+                const response = await fetch('php/newsletter.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    if (typeof showNotification === 'function') {
+                        showNotification('Thank you for subscribing!', 'success');
+                    } else {
+                        alert('Thank you for subscribing!');
+                    }
+                    this.reset();
+                } else {
+                    if (typeof showNotification === 'function') {
+                        showNotification(result.message || 'Subscription failed', 'error');
+                    } else {
+                        alert(result.message || 'Subscription failed');
+                    }
+                }
+            } catch (error) {
+                console.error('Newsletter subscription error:', error);
+                if (typeof showNotification === 'function') {
+                    showNotification('Network error. Please try again.', 'error');
+                } else {
+                    alert('Network error. Please try again.');
+                }
+            }
+        });
+        
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('i');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.querySelector('.faq-answer').classList.add('hidden');
+                    item.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ item
+            answer.classList.toggle('hidden');
+            
+            if (answer.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+        
+        // Auto-fill service based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            
+            if (service) {
+                const serviceSelect = document.getElementById('service');
+                if (serviceSelect) {
+                    serviceSelect.value = service;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

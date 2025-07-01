@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive digital services by Ceylony Digital - Web Development, Mobile Apps, Digital Marketing, SEO, Video Production and more.">
+    <meta name="keywords" content="web development services, mobile app development, digital marketing, SEO services, video production, Sri Lanka">
+    <meta name="author" content="Ceylony Digital">
+    
+    <title>Our Services - Ceylony Digital | Web Development, Mobile Apps & Digital Marketing</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%232563eb'/><text x='50' y='55' text-anchor='middle' fill='white' font-size='30' font-weight='bold'>C</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --gradient-blue: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-purple: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --gradient-pink: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            --gradient-green: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            --gradient-orange: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        #navbar {
+            backdrop-filter: blur(20px);
+            background: rgba(15, 15, 35, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--light-blue) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Premium Service Cards */
+        .service-section {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .service-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .service-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(37, 99, 235, 0.3);
+        }
+
+        .service-section:hover::before {
+            left: 100%;
+        }
+
+        .service-icon-large {
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.5));
+            transition: all 0.4s ease;
+        }
+
+        .service-section:hover .service-icon-large {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 30px rgba(37, 99, 235, 0.8));
+        }
+
+        /* Pricing Cards */
+        .pricing-info {
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Timeline Steps */
+        .timeline-container {
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-blue), #a855f7);
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .timeline-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+        }
+
+        .timeline-node {
+            background: var(--gradient-blue);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-node:hover {
+            transform: scale(1.2);
+            box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
+        }
+
+        /* FAQ Cards */
+        .faq-item {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+        }
+
+        .faq-question {
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        /* Additional Service Cards */
+        .additional-service-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .additional-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .additional-service-card:hover {
+            transform: translateY(-15px) rotateY(5deg);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.4);
+        }
+
+        .additional-service-card:hover::before {
+            left: 100%;
+        }
+
+        /* Enhanced Buttons */
+        .btn-primary {
+            background: var(--gradient-blue);
+            border: none;
+            border-radius: 16px;
+            padding: 16px 32px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 14px 30px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .service-section:hover,
+            .additional-service-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .timeline-line {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                        <span class="text-xl font-bold text-white">C</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-2">
+                    <a href="index.html" class="nav-link text-white">Home</a>
+                    <a href="about.html" class="nav-link text-white">About</a>
+                    <a href="services.html" class="nav-link text-blue-400">Services</a>
+                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
+                    <a href="contact.html" class="nav-link text-white">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-gray-900/95 backdrop-blur-lg hidden" id="mobile-menu">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Home</a>
+                <a href="about.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">About</a>
+                <a href="services.html" class="block px-4 py-3 text-blue-400">Services</a>
+                <a href="portfolio.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Portfolio</a>
+                <a href="contact.html" class="block px-4 py-3 text-white hover:bg-blue-600/20 rounded-lg transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-20 min-h-screen flex items-center">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+            <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-pink-500/10 rounded-full blur-2xl animate-bounce"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-8">
+                    🚀 What We Offer
+                </span>
+                
+                <h1 class="text-6xl md:text-8xl font-black mb-8">
+                    Our <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+                </h1>
+                
+                <p class="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-12 font-light">
+                    Comprehensive digital solutions designed to transform your business and 
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">drive growth</span> 
+                    in the digital landscape.
+                </p>
+                
+                <div class="flex justify-center">
+                    <a href="#services" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-rocket"></i>
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-green-300 mb-6">
+                    Premium Solutions
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    What We <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Offer</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    From concept to launch, we provide end-to-end digital solutions tailored to your business needs and goals.
+                </p>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="service-section p-12 mb-20" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center mb-8">
+                            <div class="service-icon-large text-7xl mr-8">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-3">Web Development</h3>
+                                <p class="text-blue-400 text-xl font-semibold">Custom Websites & Web Applications</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Create powerful, responsive websites that engage your audience and drive business growth. From simple landing pages to complex web applications with cutting-edge technology.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Responsive Design & Mobile Optimization</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">E-commerce Solutions & Payment Integration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Content Management Systems (CMS)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Progressive Web Apps (PWA)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">API Development & Integration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Performance Optimization</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-info p-8">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+                                <div>
+                                    <span class="text-gray-400 text-sm">Starting from</span>
+                                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">$500</div>
+                                    <span class="text-gray-400 text-sm">2-8 weeks delivery</span>
+                                </div>
+                                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all transform hover:scale-105">
+                                    <i class="fas fa-arrow-right mr-2"></i>
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="w-full h-80 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10 text-center">
+                                <i class="fas fa-code text-8xl text-white/90 mb-6"></i>
+                                <p class="text-white text-xl font-semibold">Modern Web Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Development -->
+            <div class="service-section p-12 mb-20" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="lg:order-2">
+                        <div class="flex items-center mb-8">
+                            <div class="service-icon-large text-7xl mr-8" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-3">Mobile Development</h3>
+                                <p class="text-green-400 text-xl font-semibold">iOS & Android Applications</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Build native and cross-platform mobile applications that provide exceptional user experiences and leverage device capabilities for maximum performance.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Native iOS & Android Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Cross-platform Solutions (React Native)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">UI/UX Design & Prototyping</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">App Store Deployment & Optimization</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Maintenance & Updates</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Analytics Integration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-info p-8">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+                                <div>
+                                    <span class="text-gray-400 text-sm">Starting from</span>
+                                    <div class="text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">$1,000</div>
+                                    <span class="text-gray-400 text-sm">4-12 weeks delivery</span>
+                                </div>
+                                <a href="contact.html" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all transform hover:scale-105">
+                                    <i class="fas fa-arrow-right mr-2"></i>
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative lg:order-1">
+                        <div class="w-full h-80 bg-gradient-to-br from-green-500 via-blue-500 to-purple-500 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10 text-center">
+                                <i class="fas fa-mobile-alt text-8xl text-white/90 mb-6"></i>
+                                <p class="text-white text-xl font-semibold">Mobile App Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing -->
+            <div class="service-section p-12 mb-20" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center mb-8">
+                            <div class="service-icon-large text-7xl mr-8" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-3">Digital Marketing</h3>
+                                <p class="text-pink-400 text-xl font-semibold">Complete Marketing Solutions</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Grow your online presence and reach your target audience with data-driven marketing strategies that deliver measurable results and ROI.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Social Media Marketing & Management</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Pay-Per-Click (PPC) Advertising</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Content Marketing & Strategy</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Email Marketing Campaigns</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Analytics & Performance Tracking</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3 text-lg"></i>
+                                <span class="text-gray-300">Brand Strategy & Development</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-info p-8">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+                                <div>
+                                    <span class="text-gray-400 text-sm">Starting from</span>
+                                    <div class="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">$300<span class="text-lg">/month</span></div>
+                                    <span class="text-gray-400 text-sm">Ongoing campaigns</span>
+                                </div>
+                                <a href="contact.html" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-xl font-semibold transition-all transform hover:scale-105">
+                                    <i class="fas fa-arrow-right mr-2"></i>
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="w-full h-80 bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10 text-center">
+                                <i class="fas fa-chart-line text-8xl text-white/90 mb-6"></i>
+                                <p class="text-white text-xl font-semibold">Digital Marketing Strategy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-purple-300 mb-6">
+                    More Services
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    Additional <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Comprehensive support services to complement your digital transformation journey and ensure long-term success.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO Services -->
+                <div class="additional-service-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">SEO Services</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Professional SEO optimization to improve your website's visibility and ranking in search engines.</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-400 text-sm">Starting from</span>
+                            <div class="text-xl font-bold text-yellow-400">$200/month</div>
+                        </div>
+                        <a href="contact.html" class="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Video Production -->
+                <div class="additional-service-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-video text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Video Production</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">High-quality video content creation including promotional videos, animations, and social media content.</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-400 text-sm">Starting from</span>
+                            <div class="text-xl font-bold text-purple-400">$200</div>
+                        </div>
+                        <a href="contact.html" class="text-purple-400 hover:text-purple-300 font-semibold transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Consultation -->
+                <div class="additional-service-card p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Tech Consultation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Expert guidance on technology decisions, architecture planning, and digital strategy development.</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-400 text-sm">Starting from</span>
+                            <div class="text-xl font-bold text-blue-400">$100/hour</div>
+                        </div>
+                        <a href="contact.html" class="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Maintenance -->
+                <div class="additional-service-card p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Maintenance & Support</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Ongoing maintenance, updates, security monitoring, and technical support for your digital assets.</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-400 text-sm">Starting from</span>
+                            <div class="text-xl font-bold text-green-400">$150/month</div>
+                        </div>
+                        <a href="contact.html" class="text-green-400 hover:text-green-300 font-semibold transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Training -->
+                <div class="additional-service-card p-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Training & Workshops</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Team training on new technologies, digital marketing strategies, and industry best practices.</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-400 text-sm">Starting from</span>
+                            <div class="text-xl font-bold text-indigo-400">$500/session</div>
+                        </div>
+                        <a href="contact.html" class="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Custom Solutions -->
+                <div class="additional-service-card p-8" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Tailored digital solutions designed specifically for your unique business requirements and challenges.</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-400 text-sm">Custom pricing</span>
+                            <div class="text-xl font-bold text-red-400">Let's discuss</div>
+                        </div>
+                        <a href="contact.html" class="text-red-400 hover:text-red-300 font-semibold transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-green-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-6">
+                    Our Process
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    How We <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Work</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    From initial consultation to project delivery, we follow a proven process that ensures quality and client satisfaction.
+                </p>
+            </div>
+            
+            <div class="timeline-container relative">
+                <!-- Timeline Line -->
+                <div class="timeline-line hidden lg:block"></div>
+                
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="lg:w-1/2 lg:pr-8 text-center lg:text-right mb-8 lg:mb-0">
+                            <div class="timeline-step p-8">
+                                <h3 class="text-2xl font-bold text-white mb-4">1. Discovery & Planning</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    We start by understanding your business goals, target audience, and project requirements through detailed consultation and comprehensive research analysis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-node w-16 h-16 rounded-full flex items-center justify-center my-8 lg:my-0">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-8"></div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="lg:w-1/2 lg:pr-8"></div>
+                        <div class="timeline-node w-16 h-16 rounded-full flex items-center justify-center my-8 lg:my-0">
+                            <i class="fas fa-pencil-ruler text-white text-2xl"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-8 text-center lg:text-left mb-8 lg:mb-0">
+                            <div class="timeline-step p-8">
+                                <h3 class="text-2xl font-bold text-white mb-4">2. Design & Strategy</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Our team creates wireframes, designs, and strategic plans that align perfectly with your brand identity and business objectives.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="lg:w-1/2 lg:pr-8 text-center lg:text-right mb-8 lg:mb-0">
+                            <div class="timeline-step p-8">
+                                <h3 class="text-2xl font-bold text-white mb-4">3. Development & Implementation</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Our skilled developers bring your vision to life using the latest technologies and industry best practices for optimal performance.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-node w-16 h-16 rounded-full flex items-center justify-center my-8 lg:my-0">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-8"></div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="lg:w-1/2 lg:pr-8"></div>
+                        <div class="timeline-node w-16 h-16 rounded-full flex items-center justify-center my-8 lg:my-0">
+                            <i class="fas fa-rocket text-white text-2xl"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-8 text-center lg:text-left">
+                            <div class="timeline-step p-8">
+                                <h3 class="text-2xl font-bold text-white mb-4">4. Testing & Launch</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Comprehensive testing ensures everything works perfectly before launch, followed by ongoing support and continuous optimization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-purple-300 mb-6">
+                    FAQ
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    Frequently Asked <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Questions</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Common questions about our services, process, and pricing to help you make informed decisions.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-question w-full text-left p-8 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">How long does it take to complete a project?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-8 pt-0">
+                            <p class="text-gray-400 leading-relaxed">
+                                Project timelines vary depending on complexity and scope. A simple website takes 2-4 weeks, while complex web applications or mobile apps can take 8-16 weeks. We provide detailed timelines during the planning phase and keep you updated throughout the development process.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-question w-full text-left p-8 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">Do you provide ongoing support after project completion?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-8 pt-0">
+                            <p class="text-gray-400 leading-relaxed">
+                                Yes, we offer comprehensive maintenance and support packages. This includes regular updates, security monitoring, bug fixes, performance optimization, and technical support to ensure your digital assets continue to perform optimally and stay secure.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-question w-full text-left p-8 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">What is your payment structure?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-8 pt-0">
+                            <p class="text-gray-400 leading-relaxed">
+                                We typically work with a 50% upfront payment and 50% upon project completion. For larger projects, we can arrange milestone-based payments to ensure cash flow management. All pricing is transparent with detailed quotes and no hidden costs.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-question w-full text-left p-8 focus:outline-none" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">Can you work with existing systems and third-party integrations?</h3>
+                                <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden p-8 pt-0">
+                            <p class="text-gray-400 leading-relaxed">
+                                Absolutely! We have extensive experience integrating with existing systems, APIs, payment gateways, CRM systems, and other third-party services. We ensure seamless integration while maintaining security, performance, and data integrity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <div data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-blue-500/20 to-pink-500/20 backdrop-blur-lg border border-white/20 rounded-full px-6 py-2 text-sm font-medium text-blue-300 mb-6">
+                    Ready to Start?
+                </span>
+                <h2 class="text-5xl md:text-6xl font-bold mb-8">
+                    Ready to Get <span class="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">Started?</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+                    Let's discuss your project requirements and create a custom solution that drives your business forward. Contact us for a free consultation and quote.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-envelope"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="portfolio.html" class="btn-secondary text-lg px-8 py-4">
+                        <i class="fas fa-folder"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                            <span class="text-xl font-bold text-white">C</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ceylony Digital</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+                        Professional software development company specializing in creating stunning digital experiences that drive business growth and success.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center hover:from-blue-600 hover:to-blue-700 transition-all">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg flex items-center justify-center hover:from-blue-500 hover:to-blue-600 transition-all">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-blue-700 to-blue-800 rounded-lg flex items-center justify-center hover:from-blue-800 hover:to-blue-900 transition-all">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg flex items-center justify-center hover:from-pink-600 hover:to-pink-700 transition-all">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-blue-400 transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Stay Updated</h3>
+                    <p class="text-gray-300 mb-4 text-sm">Subscribe for latest updates and exclusive offers.</p>
+                    <form id="newsletter-form" class="space-y-3">
+                        <input type="email" id="newsletter-email" placeholder="Your email address" 
+                               class="w-full px-4 py-3 bg-white/10 backdrop-blur-lg text-white rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400">
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Ceylony Digital. All rights reserved. | Crafted with ❤️ and cutting-edge technology
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full shadow-xl transition-all duration-300 transform scale-0 z-30">
+        <i class="fas fa-arrow-up text-xl text-white"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Initialize components
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavigation();
+            initializeMobileMenu();
+            initializeNewsletterForm();
+        });
+        
+        // Navigation functionality
+        function initializeNavigation() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(15, 15, 35, 0.95)';
+                } else {
+                    navbar.style.background = 'rgba(15, 15, 35, 0.9)';
+                }
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.style.transform = 'scale(1)';
+                } else {
+                    backToTopBtn.style.transform = 'scale(0)';
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Mobile menu functionality
+        function initializeMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Newsletter form
+        function initializeNewsletterForm() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletter-email').value;
+                    
+                    if (!email || !email.includes('@')) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    showNotification('Thank you for subscribing!', 'success');
+                    this.reset();
+                });
+            }
+        }
+        
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('i');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.querySelector('.faq-answer').classList.add('hidden');
+                    item.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ item
+            answer.classList.toggle('hidden');
+            
+            if (answer.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm transition-all duration-300 transform translate-x-full`;
+            
+            switch (type) {
+                case 'success':
+                    notification.classList.add('bg-green-600', 'text-white');
+                    notification.innerHTML = `<i class="fas fa-check-circle mr-2"></i>${message}`;
+                    break;
+                case 'error':
+                    notification.classList.add('bg-red-600', 'text-white');
+                    notification.innerHTML = `<i class="fas fa-exclamation-circle mr-2"></i>${message}`;
+                    break;
+                default:
+                    notification.classList.add('bg-blue-600', 'text-white');
+                    notification.innerHTML = `<i class="fas fa-info-circle mr-2"></i>${message}`;
+            }
+            
+            document.body.appendChild(notification);
+            setTimeout(() => notification.classList.remove('translate-x-full'), 100);
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
